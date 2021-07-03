@@ -22,19 +22,22 @@ if (count($_POST) > 0) {
 
 
 
-      /* if (password_verify($password, $row["password"])) */
-      $row["is_staff"] == 1 ?
+      if (password_verify($password, $row["password"])) {
 
-        header('location:../moderator/mdashboard.php') : header('location:../sections/dashboard.php');
-      $_SESSION['message'] = "Login successfull";
+        $row["is_staff"] == 1 ?
+
+          header('location:../moderator/mdashboard.php') : header('location:../sections/dashboard.php');
+        $_SESSION['message'] = "Login successfull";
+      }
     }
+  } else {
+
+
+    $_SESSION['message'] = "Invalid email or Password!";
+    header('Location:../sections/login.php');
   }
-} else {
-
-
-  $_SESSION['message'] = "Invalid email or Password!";
-  header('Location:../sections/login.php');
 }
+
 
 
 ?>
