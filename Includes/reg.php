@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 
 
-    // $passhash = password_hash($password, PASSWORD_DEFAULT);
+    $passhash = password_hash($password, PASSWORD_DEFAULT);
 
     $s = "SELECT*FROM users_table WHERE name = '$name'";
     $result = mysqli_query($conn, $s);
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['msg'] = "username is already taken!";
         header('Location:../sections/register.php');
     } else {
-        $insert = "INSERT INTO users_table(name,email,password) VALUES('$name', '$email', '$password')";
+        $insert = "INSERT INTO users_table(name,email,password) VALUES('$name', '$email', '$passhash')";
         mysqli_query($conn, $insert);
         $_SESSION['msg'] = "Account created Successfully ";
         header('Location:../sections/login.php');
