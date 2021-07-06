@@ -146,13 +146,7 @@ body {
   font-size: 0.9rem;
 }
 
-.main-dash {
-  width: 100%;
-  background-color: #f3f3f3;
-  transform: translate(-50% -50%);
-  display: flex;
-  position: absolute;
-}
+
 
 /*NAVBAR STYLES CSS*/
 @keyframes swing {
@@ -255,7 +249,7 @@ body {
   transition-delay: 0.3s;
 }
 .page-wrapper.toggled #show-sidebar {
-  left: -20px;
+  left: -40px;
 }
 /*----------------sidebar-wrapper----------------*/
 
@@ -502,12 +496,13 @@ body {
 .page-wrapper .page-content {
   display: inline-block;
   width: 100%;
+  margin-left: 5rem;
   margin-top: 0px;
   padding-top: 20px;
 }
 
 .page-wrapper .page-content > div {
-  padding: 20px 40px;
+  padding: 30px 60px;
 }
 
 .page-wrapper .page-content {
@@ -632,13 +627,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled {
-    padding-left: 125px;
+    padding-left: px;
     margin-left: 5px;
   }
 }
-.page-content {
-  border: 1px solid rgb(224, 219, 219);
-}
+/*.page-content {
+  margin-left: 10rem;
+}*/
+
 .page-wrapper .all-courses {
   display: inline-block;
   width: 100%;

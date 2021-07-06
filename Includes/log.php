@@ -7,7 +7,7 @@ if (count($_POST) > 0) {
   $con = mysqli_connect('localhost', 'root', '', 'moon_db');
   $result = mysqli_query($con, "SELECT * FROM users_table WHERE email='" . $_POST["email"] . "' and password = '" . $_POST["password"] . "'");
 
-  //$password =  $_POST["password"];
+  $password =  $_POST["password"];
 
   if (mysqli_num_rows($result)) {
     $row = mysqli_fetch_array($result);
@@ -22,14 +22,14 @@ if (count($_POST) > 0) {
 
 
 
-      if (password_verify($password, $row["password"])) {
+    
 
         $row["is_staff"] == 1 ?
 
           header('location:../moderator/mdashboard.php') : header('location:../sections/dashboard.php');
         $_SESSION['message'] = "Login successfull";
       }
-    }
+    
   } else {
 
 

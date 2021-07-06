@@ -228,7 +228,7 @@ session_start();
                 <!-- PAGE CONTENT DASHBOARD -->
 
 
-                <main class="page-content">
+                <main class="container page-content">
                     <div class="container">
                         <div class=" moon-logo container  ">
 
