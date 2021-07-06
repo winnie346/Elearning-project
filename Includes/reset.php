@@ -72,8 +72,8 @@ if (isset($_POST["request-submit"])) {
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = '465';
     $mail->isHTML();
-    $mail->Username = 'ndondugrace88@gmail.com';
-    $mail->Password = 'Musyoka@254';
+    $mail->Username = 'testing@gmail.com';
+    $mail->Password = 'testing';
     $mail->setFrom($headers);
     $mail->Subject = $subject;
     $mail->Body = $message;
