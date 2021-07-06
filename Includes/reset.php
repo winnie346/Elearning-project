@@ -44,7 +44,7 @@ if (isset($_POST["request-submit"])) {
 
 
 
-    $to = $userEmail;
+   /* $to = $userEmail;
 
     $subject = 'Reset your password for moon e-learning';
 
@@ -57,9 +57,13 @@ if (isset($_POST["request-submit"])) {
     $headers .= "Reply-To : ndondugrace88@gmail.com\r\n ";
     $headers .= " Content-type : text/html\r\n ";
 
-    mail($to, $subject,  $message, $headers);
+    mail($to, $subject,  $message, $headers);*/
 
-    /* require_once('../PHPMailer-master/get_oauth_token.php');
+     require_once('../PHPMailer-master/get_oauth_token.php');
+
+     try{
+
+     
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
@@ -76,7 +80,17 @@ if (isset($_POST["request-submit"])) {
     $mail->addAddress = $to;
 
 
-    $mail->send();*/
+    $mail->send();
+
+    echo "success";
+    exit();
+}
+catch(Exception $e){
+    echo $mail->ErrorInfo ;
+    exit();
+    
+
+}
 
 
 
@@ -84,4 +98,5 @@ if (isset($_POST["request-submit"])) {
     header("Location: ../sections/forget.php?reset=success");
 } else {
     header("Location: ../sections/login.php");
+
 }

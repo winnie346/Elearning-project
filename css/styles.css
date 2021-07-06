@@ -146,8 +146,6 @@ body {
   font-size: 0.9rem;
 }
 
-
-
 /*NAVBAR STYLES CSS*/
 @keyframes swing {
   0% {
@@ -626,8 +624,8 @@ body {
   background-color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .page-wrapper.toggled {
-    padding-left: px;
+  .page-wrapper .toggled {
+    padding-left: 5rem;
     margin-left: 5px;
   }
 }

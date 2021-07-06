@@ -70,7 +70,7 @@ session_start();
 
                         <div class="column  col-md-6 col-ms-12 pt-2">
                             <form action="../Includes/log.php" method="POST">
-                               
+
                                 <label for="email">Email address</label>
                                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 

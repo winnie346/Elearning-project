@@ -15,8 +15,15 @@ This is a school final project
 
 ## Objectives
 
+
+
 ## Software Requirement Specifications
 
-### users
+
+### The users of the sytem
+
+1. Student
+2. Moderator
+3. Admin
 
 ### Functional Requirements

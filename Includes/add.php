@@ -12,8 +12,17 @@ if (isset($_POST['enroll'])) {
     $course_id = $_POST['course_id'];
     $user_id = $_SESSION['user_id'];
 
+    $s = "SELECT * FROM my_courses where course_id = $course_id and user_id = $user_id";
+    $result = mysqli_query($conn, $s);
 
-    $insert = "INSERT INTO my_courses(course, course_id, user_id) VALUES('$course', '$course_id','$user_id ')";
+    if ($result) {
+
+        $_SESSION['msg'] = "denied!!";
+        header("location:../sections/enrollcourse.php");
+        exit();
+    }
+
+    $insert = "INSERT INTO my_courses(course, course_id, user_id) VALUES('$course', '$course_id','$user_id  ')";
     $result = mysqli_query($conn, $insert);
     if ($result) {
         $_SESSION['msg'] = "Enroll Successfully !!";
