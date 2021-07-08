@@ -14,10 +14,11 @@ if (isset($_POST['enroll'])) {
 
     $s = "SELECT * FROM my_courses where course_id = $course_id and user_id = $user_id";
     $result = mysqli_query($conn, $s);
+    $num = mysqli_num_rows($result);
 
-    if ($result) {
+    if ($num > 0) {
 
-        $_SESSION['msg'] = "denied!!";
+        $_SESSION['msg'] = "You are already enrolled!!";
         header("location:../sections/enrollcourse.php");
         exit();
     }

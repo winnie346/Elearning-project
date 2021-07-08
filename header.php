@@ -149,6 +149,14 @@ session_start();
                                     </div>
                                     -->
                                 </li>
+                                <li class="">
+                                    <a href="./exams.php">
+                                        <i class="fa fa-tachometer-alt"></i>
+                                        <span>Examination</span>
+
+                                    </a>
+
+                                </li>
                                 <li class="sidebar-dropdown">
                                     <a href="#">
                                         <i class="fa fa-globe"></i>
